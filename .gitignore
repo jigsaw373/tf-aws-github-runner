@@ -1,5 +1,4 @@
 # state
-*.tfstate*
 .terraform.lock.hcl
 
 # Module directory
