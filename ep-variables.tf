@@ -14,7 +14,7 @@ variable "github_app_ep" {
 variable "ep_ec2_types" {
   description = "Types of ec2 spot instances to use for runners"
   type        = list
-  default     = ["t2.small", "t3.small"]
+  default     = ["c4.large", "c4.xlarge"]
 }
 
 variable "ep_idle_config" {
@@ -28,12 +28,12 @@ variable "ep_idle_config" {
    default = {
     time      = "* * 10-17 * * 0,1,2,3,6" 
     timeZone  = "Asia/Tehran"
-    idleCount = 2
+    idleCount = 1
      }
 }
 
 variable "ep_max_count" {
   description = "Maximum number of ec2 to be allowed to run simultaneously"
   type        = number
-  default     = 3
+  default     = 2
 }
